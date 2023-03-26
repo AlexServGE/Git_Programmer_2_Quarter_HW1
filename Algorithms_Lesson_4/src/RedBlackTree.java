@@ -62,7 +62,7 @@ public class RedBlackTree {
                 result = leftSwap(result);
             }
             if (result.leftChild != null && result.leftChild.color == Color.RED &&
-                    result.rightChild != null || result.rightChild.color == Color.RED) {
+                    result.rightChild != null && result.rightChild.color == Color.RED) {
                 needRebalance = true;
                 colorSwap(result);
             }
